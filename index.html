@@ -3,27 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <title>Interactive Terrain Generator</title>
-    <!-- library -->
+  <!-- processing library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js"></script>
-  <script src="terrain_generator.js" defer></script>
+  <script src="terrain_generator.js"></script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div id="container">
-    <!-- p5.js will attach the canvas here -->
     <div id="sketch-container"></div>
-    <!-- Sliders Container -->
     <div id="controls">
+    <h1>Terrain Controls</h1>
+
       <div class="control-group">
-        <label for="intensitySlider">Terrain Intensity</label>
+        <label for="intensitySlider">Intensity (Height)</label>
         <input type="range" id="intensitySlider" min="50" max="300" value="100" step="10">
       </div>
       <div class="control-group">
-        <label for="noiseSlider">Noise Scale</label>
+        <label for="noiseSlider">Noise (Smoothness)</label>
         <input type="range" id="noiseSlider" min="0.05" max="0.5" value="0.1" step="0.01">
       </div>
       <div class="control-group">
-        <label for="speedSlider">Flying Speed</label>
+        <label for="speedSlider">Flying / Generation Speed </label>
         <input type="range" id="speedSlider" min="0.001" max="0.05" value="0.01" step="0.001">
       </div>
     </div>

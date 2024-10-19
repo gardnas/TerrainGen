@@ -4,36 +4,59 @@ body {
     background-color: #000;
     font-family: Arial, sans-serif;
     color: #fff;
-  }
+}
   
-  #container {
-    display: flex;
-    height: 100vh;
-  }
-  
-  #sketch-container {
-    flex: 1; 
-  }
-  
-  #controls {
-    width: 250px;
-    background-color: #111;
-    padding: 20px;
-    box-sizing: border-box;
-    overflow-y: auto;
-  }
-  
-  .control-group {
-    margin-bottom: 20px;
-  }
-  
-  .control-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 14px;
-  }
-  
-  .control-group input[type="range"] {
-    width: 100%;
-  }
-  
+#container {
+display: flex;
+height: 100vh;
+}
+
+#sketch-container {
+flex: 1;
+}
+
+#controls {
+width: 35vw;
+background-color: #111;
+padding: 20px;
+box-sizing: border-box;
+overflow-y: auto;
+}
+
+.control-group {
+margin-bottom: 30px;
+}
+
+.control-group label {
+display: block;
+margin-bottom: 10px;
+font-size: 15px;
+}
+
+.control-group input[type="range"] {
+width: 100%;
+-webkit-appearance: none;
+appearance: none;
+background: #333;
+height: 5px;
+border-radius: 5px;
+outline: none;
+}
+
+.control-group input[type="range"]::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+width: 15px;
+height: 15px;
+background: #fff;
+border-radius: 50%;
+cursor: pointer;
+}
+
+.control-group input[type="range"]::-moz-range-thumb {
+width: 15px;
+height: 15px;
+background: #fff;
+border-radius: 50%;
+cursor: pointer;
+}
