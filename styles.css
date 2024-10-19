@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    font-family: Arial, sans-serif;
+    color: #fff;
+  }
+  
+  #container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  #sketch-container {
+    flex: 1; 
+  }
+  
+  #controls {
+    width: 250px;
+    background-color: #111;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  
+  .control-group {
+    margin-bottom: 20px;
+  }
+  
+  .control-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+  .control-group input[type="range"] {
+    width: 100%;
+  }
+  
