@@ -9,14 +9,25 @@ body {
 #container {
 display: flex;
 height: 100vh;
+height: 100dvh;
+overflow: hidden;
 }
 
+/* the canvas fills whatever space the controls leave */
 #sketch-container {
 flex: 1;
+min-width: 0;
+min-height: 0;
+overflow: hidden;
+}
+
+#sketch-container canvas {
+display: block;
 }
 
 #controls {
-width: 35vw;
+flex: none;
+width: clamp(240px, 28vw, 380px);
 background-color: #111;
 padding: 20px;
 box-sizing: border-box;
@@ -59,4 +70,15 @@ height: 15px;
 background: #fff;
 border-radius: 50%;
 cursor: pointer;
+}
+/* narrow screens: terrain on top, controls underneath */
+@media (max-width: 720px) {
+#container {
+flex-direction: column;
+}
+
+#controls {
+width: 100%;
+max-height: 42vh;
+}
 }
